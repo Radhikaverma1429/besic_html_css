@@ -1,0 +1,44 @@
+.bg{
+    background-image:url("https://img.freepik.com/free-photo/big-ben-houses-parliament-london-uk_268835-1400.jpg?size=626&ext=jpg&ga=GA1.1.1538206401.1704796091&semt=sph");
+    
+    height:100vh;
+    background-size: cover;
+    padding: 20px;
+}
+.heading{
+    color: #ffffff;
+    font-weight: Bold;
+    font-family:"Roboto";
+
+}
+.card-container{
+background-color: #ffffff;
+border-radius: 8px;
+padding: 20px;
+margin: 10px;
+width: 80%;
+/* border: 2px solid black; */
+
+}
+.card-Tajmahal{
+    color: #0f0e46;
+    font-family: "Roboto";
+    font-weight: Bold;
+
+
+}
+.tajmahal-para{
+    font-family: "roboto";
+    color: #6c6b70;
+
+}
+.size-tajmahal{
+height: 100px;
+width: 80px;
+border-radius: 8px;
+}
+.mg
+{
+    margin-right: 200px;
+    /* border: 2px solid red; */
+}

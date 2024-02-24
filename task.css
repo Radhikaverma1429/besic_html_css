@@ -1,0 +1,62 @@
+.bg {
+    background-image: url('https://img.freepik.com/free-photo/close-up-hamburger-with-fries_23-2148263009.jpg?size=626&ext=jpg&ga=GA1.1.1815904745.1704795410&semt=ais');
+    background-size: cover;
+    height: 90vh;
+    /* width: vh; */
+}
+
+.headding {
+    display: flex;
+}
+
+.image-content {
+    font-family: "Lemon", serif;
+    margin-top: 20vh;
+    margin-left: 20vh;
+    font-size: 5vh;
+    background-color: transparent;
+}
+
+.btn {
+    height: 5vh;
+    color: black;
+    background-color: transparent;
+}
+
+.heddig1 {
+    margin-left: 15vh;
+}
+.h1 {
+    text-align: center;
+    font-family: cursive;
+    margin-top: 4vh;
+}
+.img {
+    margin-top: 5vh;
+    height: 28vh;
+}
+
+.row{
+    /* background-color: azure; */
+    border: 1px gray transparent;
+
+}
+.box {
+    display: flex;
+    background-color: red;
+    height: 30px;
+    width: 120px;
+    justify-content: center;
+    margin-left: 15vh;
+    border-radius: 5px;
+    font-family: cursive;
+}
+
+.container1{
+    background-color: black;
+    color: white;
+    margin-top: 4vh;        
+}
+.row{
+    margin-top: 3vh;
+}

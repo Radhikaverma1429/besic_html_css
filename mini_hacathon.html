@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Web App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            margin-right: 8px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #meaningResult {
+            margin-top: 20px;
+        }
+
+        #errorMessage {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dictionary Web App</h1>
+        <input type="text" id="wordInput" placeholder="Enter a word">
+        <button onclick="fetchMeaning()">Search</button>
+        <div id="meaningResult"></div>
+        <div id="errorMessage"></div>
+    </div>
+
+    <script>
+        function fetchMeaning() {
+            const wordInput = document.getElementById('wordInput').value;
+            const meaningResult = document.getElementById('meaningResult');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Validate input
+            if (!/^[a-zA-Z]+$/.test(wordInput)) {
+                errorMessage.innerHTML = 'Please enter a valid word (only alphabets allowed).';
+                meaningResult.innerHTML = '';
+                return;
+            }
+
+            // Clear previous error messages
+            errorMessage.innerHTML = '';
+
+            // Make API call to DictionaryAPI
+            const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordInput}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        // Display the primary definition and part of speech
+                        const firstEntry = data[0];
+                        meaningResult.innerHTML = `<strong>Meaning:</strong> ${firstEntry.meanings[0].definitions[0].definition}<br>`;
+                        meaningResult.innerHTML += `<strong>Part of Speech:</strong> ${firstEntry.meanings[0].partOfSpeech}`;
+                    } else {
+                        errorMessage.innerHTML = 'Word not found in the dictionary.';
+                        meaningResult.innerHTML = '';
+                    }
+                })
+                .catch(error => {
+                    errorMessage.innerHTML = 'Error fetching data. Please try again later.';
+                    meaningResult.innerHTML = '';
+                });
+        }
+
+    </script>
+</body>
+
+</html>

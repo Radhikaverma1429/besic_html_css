@@ -1,0 +1,41 @@
+.bg {
+    background-image: url('https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/diwali-bg.png');
+    height: 40vh;
+    background-size: cover;
+}
+
+.heading {
+    color: #ffffff;
+    font-weight: Bold;
+    font-family: "Lemon", serif;
+}
+
+.box {
+    background-color: #e6f6ff;
+    margin-top:0%;
+    border-radius: 8px;
+    margin-top: 12%;
+}
+.box1 {
+    background-color: #e6f6ff;
+    margin-top:0%;
+    border-radius: 8px;
+}
+
+.mg {
+    width: 80px;
+    height: 100px;
+    background-color: #ffffff;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 10px;
+    margin-bottom: 0.5%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.heddig1{
+    display: flex;
+    justify-content: center;
+}
+
